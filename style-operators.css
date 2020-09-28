@@ -1,0 +1,352 @@
+body {
+    background-image: url("assets/background-dark.jpg");
+    margin: 0;
+    padding: 0;
+}
+
+#nav {
+    position: static;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    width: 100%;
+    height: auto;
+}
+
+#nav ul {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+#nav ul li {
+    display: inline-block;
+    color: blue;
+}
+
+#nav ul li:hover {}
+
+#nav ul li a {
+    font-size: 15px;
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 50px;
+}
+
+#nav ul li a:hover {}
+
+#nav ul img {
+    float: left;
+}
+
+.dropdown {}
+
+.dropbtn {}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: darkturquoise;
+    padding-right: 6px;
+}
+
+.dropdown-content a {
+    display: block;
+}
+
+.dropdown:hover {
+    background-color: darkturquoise;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Untuk Responsive Header */
+@media only screen and (max-width: 800px) {
+    #nav {
+        padding: 0;
+    }
+    #nav ul {
+        text-align: center;
+    }
+    #nav ul img {
+        float: unset;
+    }
+    #nav ul li {
+        display: block;
+    }
+    .dropdown-content {
+        position: relative;
+        margin-left: 0;
+    }
+    .dropdown:active .dropdown-content {
+        display: block;
+    }
+
+    .container-operators {
+        display: flex;
+        float: unset;
+    }
+}
+
+
+
+#container {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: black;
+}
+
+#form {
+    margin: auto;
+    width: 25%;
+}
+
+#form input {
+    outline: none;
+    border: whitesmoke 2px solid;
+    background-color: whitesmoke;
+    padding: 2% 3%;
+    margin-top: 3%;
+    width: 100%;
+}
+
+#form input:hover {
+    background-color: white;
+}
+
+#form input:focus {
+    background-color: wheat;
+    border: darkkhaki 2px solid;
+}
+
+#form label {
+    color: white;
+    font-size: 12px;
+}
+
+#form #agree {
+    width: auto;
+}
+
+#form #submitbtn {
+    background-color: black;
+    color: white;
+}
+
+#nav ul li #active {
+    color: turquoise;
+}
+
+
+
+
+
+.operators-title {
+    text-align: center;
+    font-family: sans-serif;
+}
+    
+.operators-title {
+    color: white;
+    font-size: 50px;
+}
+    
+.row_op {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0% 0% 5% 0%;
+}
+
+.column_op {
+    flex: 50%;
+    max-width: 10%;
+    padding: 0 4px;
+}
+
+.column_op span {
+    transition: background-color 0.3s, border 0.3s;
+    background-color: grey;
+    display: inline-block;
+    width: 100%;
+    color: white;
+    text-align: center;
+    border: 3px solid white;
+    top: 0px;
+    font-family: sans-serif;
+    padding: 3% 0%;
+}
+
+.column_op img {
+    transition: 0.3s;
+    vertical-align: middle;
+    width: 100%;
+    background-color: #111111;
+    border: 3px solid white;
+}
+
+.column_op a {
+    transition: transform 0.3s, box-shadow 0.3s, border 0.3s;
+    display: block;
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+
+.column_op a:hover{
+    display: block;
+    transform: scale(1.1);
+    box-shadow: 0px 0px 20px 5px darkturquoise; 
+    border-color: darkturquoise;
+}
+
+.column_op a:hover img {
+    border-color: darkturquoise;
+}
+
+.column_op a:hover span {
+    background-color: darkturquoise;
+    border-color: darkturquoise;
+} 
+
+
+#nav ul li :hover {
+    background-color: darkturquoise;
+    color: white;
+}
+
+#nav ul li #active:hover {
+    background-color: darkturquoise;
+    color: white;
+}
+
+.overlay {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0);
+    transition: 1s;
+    text-align: center;
+}
+
+.overlay a {
+    margin-right: 45%;
+    margin-left: 45%;
+}
+
+.overlay:target {
+    transform: scale(1);
+    width: auto;
+    height: auto;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.8);
+    font-family: sans-serif;
+}
+
+.overlay img {
+    width: 18%;
+    height: auto;
+    border: none;
+    background: none;
+}
+
+.overlay:target img, .overlay:target p {
+    animation: zoomAndFade 1s;
+}
+
+.overlay .overlay-text {
+    margin: 1%;
+    color: white;
+    font-size: 30px;
+}
+
+.close {
+    margin-top: 20%;
+    color: white;
+    font-size: 30px;
+}
+
+.biography {
+    margin: 2%;
+    font-size: 18px;
+    color: white;
+}
+
+
+
+@keyframes zoomAndFade {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+
+/* Untuk Responsive Content */
+@media screen and (max-width: 800px) {
+    .column_op {
+        flex: 50%;
+        max-width: 20%;
+    }
+
+    .operators-title p {
+        font-size: 38px;
+    }
+
+    .overlay a {
+        margin-top: 15%;
+    }
+
+    .overlay img {
+        width: 30%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .column_op {
+        flex: 100%;
+        max-width: 30%;
+    }
+
+    .operators-title p {
+        font-size: 28px;
+    }
+
+    .overlay a {
+        margin-top: 25%;
+    }
+
+    .overlay img {
+        width: 40%;
+    }
+}
+
+
+#footer {
+    text-align: center;
+    padding: 20px 30%;
+    background-color: black;
+}
+    
+#footer p {
+    color: white;
+}
+
+/* Responsive untuk Footer */
+@media screen and (max-width: 800px) {
+    #footer {
+        text-align: center;
+        font-size: 10px;
+    }
+}

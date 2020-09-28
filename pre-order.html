@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HCI PROJECT - Pre Order</title>
+    <link rel="stylesheet" href="style.css" type="text/css" />
+  </head>
+
+  <body>
+    <div id="nav">
+      <ul>
+        <a href="index.html"
+          ><img
+            src="assets/LogoInWhite.png"
+            alt="NAVLOGO"
+            width="200px"
+            height="100%"
+        /></a>
+        <li class="dropdown">
+          <a class="dropbtn" href="#">GAME INFO</a>
+          <div class="dropdown-content">
+            <a href="operators.html">OPERATOR</a>
+            <a href="maps.html">MAPS</a>
+          </div>
+        </li>
+
+        <li><a href="quarantine.html">QUARANTINE</a></li>
+        <li><a href="pre-order.html" id="active">PRE-ORDER</a></li>
+      </ul>
+    </div>
+
+    <div id="container">
+      <div id="form">
+        <input
+          type="text"
+          id="username"
+          placeholder="Username"
+          onclick="validateName()"
+          onchange="validateName()"
+        /><br />
+        <label for="username" id="namealert" class="errormsg"></label><br />
+
+        <input
+          type="text"
+          id="email"
+          placeholder="Email"
+          onclick="validateEmail()"
+          onchange="validateEmail()"
+        /><br />
+        <label for="email" id="emailalert" class="errormsg"></label><br />
+
+        <input
+          type="password"
+          id="password"
+          placeholder="Password"
+          onclick="validatePassword()"
+          onchange="validatePassword()"
+        /><br />
+        <label for="password" id="passalert" class="errormsg"></label><br />
+
+        <input
+          type="password"
+          id="cpassword"
+          placeholder="Confirm Password"
+          onclick="validateCPassword()"
+          onchange="validateCPassword()"
+        /><br />
+        <label for="cpassword" id="cpassalert" class="errormsg"></label><br />
+
+        <input
+          type="text"
+          id="address"
+          placeholder="Address"
+          onclick="validateAddress()"
+          onchange="validateAddress()"
+        /><br />
+        <label for="address" id="addressalert" class="errormsg"></label><br />
+
+        <input type="text" id="Copies" placeholder="Copies" /><br />
+        <label for="Copies" id="Copiesalert" class="errormsg"></label><br />
+
+        <input type="text" id="Type" placeholder="Game Type" /><br />
+        <label for="Type" id="Typealert" class="errormsg"></label><br />
+
+        <input type="checkbox" id="agree" />
+        <label for="agree">Agree to Terms and Service agreement.</label><br />
+
+        <label for="submit" id="agreementalert" class="errormsg"></label><br />
+        <input
+          type="submit"
+          id="submitbtn"
+          value="Submit"
+          onclick="validateAll()"
+        />
+      </div>
+    </div>
+
+    <div id="footer">
+      <p>FIND US ON</p>
+      <img
+        src="assets/facebook-icon.png"
+        alt="facebook-icon"
+        width="40px"
+        height="auto"
+      />
+      <img
+        src="assets/twitter-icon.png"
+        alt="facebook-icon"
+        width="40px"
+        height="auto"
+      />
+      <p>&copy; Ubisoft Entertainment. All Right Reserved.</p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic voluptatum
+        tenetur vel cumque est quis quisquam quod perferendis, eligendi deleniti
+        illum, dolore sequi commodi dicta velit eius nisi ea reprehenderit.
+      </p>
+    </div>
+  </body>
+  <script type="text/javascript" src="js/preorder.js"></script>
+</html>

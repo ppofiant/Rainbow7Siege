@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HCI PROJECT</title>
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <link rel="stylesheet" href="style-quarantine.css" type="text/css" />
+  </head>
+
+  <body>
+    <div id="nav">
+      <ul>
+        <a href="index.html"
+          ><img
+            src="assets/LogoInWhite.png"
+            alt="NAVLOGO"
+            width="200px"
+            height="100%"
+        /></a>
+        <li class="dropdown">
+          <a class="dropbtn" href="#">GAME INFO</a>
+          <div class="dropdown-content">
+            <a href="operators.html">OPERATOR</a>
+            <a href="maps.html">MAPS</a>
+          </div>
+        </li>
+
+        <li><a href="quarantine.hmtl" id="active">QUARANTINE</a></li>
+        <li><a href="pre-order.html">PRE-ORDER</a></li>
+      </ul>
+    </div>
+
+    <div id="container">
+      <img id="image" src="assets/Quarantine.jpg" alt="image not found" />
+      <div id="middle">
+        <h1>COMING SOON</h1>
+        <hr />
+        <p id="countdown"></p>
+      </div>
+    </div>
+
+    <div id="footer">
+      <p>FIND US ON</p>
+      <img
+        src="assets/facebook-icon.png"
+        alt="facebook-icon"
+        width="40px"
+        height="auto"
+      />
+      <img
+        src="assets/twitter-icon.png"
+        alt="facebook-icon"
+        width="40px"
+        height="auto"
+      />
+      <p>&copy; Ubisoft Entertainment. All Right Reserved.</p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic voluptatum
+        tenetur vel cumque est quis quisquam quod perferendis, eligendi deleniti
+        illum, dolore sequi commodi dicta velit eius nisi ea reprehenderit.
+      </p>
+    </div>
+  </body>
+</html>
+<script>
+  var countDownDate = new Date("Jan 5, 2021 15:37:25").getTime();
+
+  var countdownfunction = setInterval(function () {
+    var now = new Date().getTime();
+
+    var distance = countDownDate - now;
+
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor(
+      (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+    );
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    document.getElementById("countdown").innerHTML =
+      days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+
+    if (distance < 0) {
+      clearInterval(countdownfunction);
+      document.getElementById("countdown").innerHTML = "EXPIRED";
+    }
+  }, 1000);
+</script>
